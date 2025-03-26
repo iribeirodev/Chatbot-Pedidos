@@ -5,10 +5,9 @@ namespace ChatSampleClientes.Infrastructure.Providers;
 
 public class CustomerProvider : ICustomerProvider
 {
-    private readonly string connectionString = "Server=localhost;Database=Samples;Trusted_Connection=True;TrustServerCertificate=True;";
-
     public async Task<string> GetPedidosByCliente()
     {
+        string connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
         using (var connection = new SqlConnection(connectionString))
         {
             await connection.OpenAsync();

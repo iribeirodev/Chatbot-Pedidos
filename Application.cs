@@ -27,6 +27,12 @@ public class Application
 
             Console.Write("Digite sua pergunta: ");
             string pergunta = Console.ReadLine();
+            if (string.IsNullOrEmpty(pergunta))
+            {
+                Console.WriteLine("Resposta: Faça uma pergunta ou CTRL+C para sair.");
+                Console.ReadKey();
+                continue;
+            }
 
             // I - Consultar pedidos do cliente no banco de dados
             var pedidos = await _customerProvider.GetPedidosByCliente(); //(clienteNome);
