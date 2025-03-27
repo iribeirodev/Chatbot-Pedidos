@@ -4,6 +4,27 @@ Este projeto é um chatbot desenvolvido em **C#** que permite a consulta de pedi
 
 ---
 
+##  **Como Funciona?**
+
+Este chatbot utiliza uma técnica conhecida como **RAG (Retrieval-Augmented Generation)** para fornecer respostas mais precisas e atualizadas. Em vez de depender apenas do conhecimento aprendido durante o treinamento do modelo de IA, o sistema **recupera dados do banco de dados SQL** antes de gerar uma resposta.
+
+**Recuperação de Dados (RAG):**  
+   Antes de enviar a pergunta para a **API de IA**, o sistema consulta o banco de dados SQL para **obter informações relevantes** sobre pedidos, peças e clientes.
+
+**Geração de Resposta:**  
+   O modelo de IA recebe os dados recuperados do banco e os utiliza para gerar uma **resposta contextualizada** sobre os pedidos de peças de engenharia. Isso permite que o chatbot forneça **respostas mais precisas**, como, por exemplo, quantos pedidos um cliente fez, ou o status de um pedido específico.
+
+**Sem Aprendizado Contínuo:**  
+   O modelo de IA **não aprende com as interações**. Ele é pré-treinado e não muda com base nas perguntas e respostas anteriores. No entanto, o sistema é configurado para **consultar dados atualizados** sempre que uma nova pergunta é feita.
+
+## **Funcionalidades Principais**
+
+- **Consulta de pedidos de peças** com base em dados específicos (cliente, número do pedido, etc.).
+- **Integração com banco de dados SQL Server** para recuperar informações atualizadas.
+- **Uso de IA para interpretação e geração de respostas** baseadas nos dados recuperados.
+- Respostas **contextualizadas** com base nas informações do banco de dados e do modelo de IA.
+
+
 ## 📂 Estrutura do Projeto
 
 ![image](https://github.com/user-attachments/assets/104966d8-0556-416d-ae83-ae2bb8b52b14)
